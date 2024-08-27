@@ -32,13 +32,12 @@
 ## 项目介绍
 
 本项目是基于 Spring Boot + Spring Cloud Alibaba 微服务 + Docker + RabbitMQ + Vue 3 的 **编程算法题目在线评测系统**
-（简称OJ）。
+。
 
 > 源项目来自编程导航（https://yupi.icu）
 
 
-Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户可以选择题目、编写代码并提交代码进行评测，而且是高效、稳定的 OJ
-在线判题评测系统，它能够根据用户提交的代码、出题人预先设置的题目输入和输出用例，进行编译代码、运行代码、判断代码运行结果是否正确。
+Swing OJ（Swing Online Judge）系统是一个在线算法判题系统，用户可以选择题目、编写代码并提交代码进行评测，系统能够根据用户提交的代码、出题人预先设置的题目输入和输出用例，进行编译代码、运行代码、判断代码运行结果是否正确。
 
 ## 项目功能
 
@@ -95,9 +94,12 @@ Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户
 ![项目结构图](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/aac66054313634b80e04a.png)
 
 ## 项目核心业务流程 🔥
+   主业务后端：提交判题任务给判题服务
 
-判题服务：获取题目信息、预计的输入输出结果，返回给主业务后端：用户的答案是否正确
-代码沙箱：只负责运行代码，给出程序运行的结果，不用管用户提交的程序是否正确。 因此 判题服务 和 代码沙箱 实现了解耦
+   判题服务：调用代码沙箱，并根据代码沙箱返回的结果，进行判题
+
+   代码沙箱：只负责运行代码，给出程序运行的结果，不管用户提交的程序是否正确。 
+
 核心流程时序图
 ![核心流程时序图](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/63cb272caa12904280865.png)
 ## 微服务项目
@@ -124,7 +126,7 @@ Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户
 5. Spring 事务注解
 6. Spring Cloud Alibaba
 7. Spring Gateway
-8. MyBatis + MyBatis Plus 数据访问（开启分页）
+8. MyBatis + MyBatis Plus 数据访问
 9. MyBatis-Plus 数据库访问结构
 10. Redis：分布式存储用户信息
 11. Redisson：限流控制
@@ -218,4 +220,7 @@ Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户
 ## 后续项目扩展
 
 - 多语言代码沙箱
+- 题库建设
+- 支持多种题型
+- 沙箱接受多组测试用例
 
