@@ -17,6 +17,8 @@
         <module>swingoj-backend-question-service</module>
         <module>swingoj-backend-file-service</module>
         <module>swingoj-backend-service-client</module>
+        <module>swingoj-backend-rank-service</module>
+
     </modules>
     <properties>
         <java.version>1.8</java.version>

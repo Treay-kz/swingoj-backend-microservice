@@ -62,6 +62,12 @@ public class User implements Serializable {
     private String email;
 
     /**
+     * 总分
+     */
+    private Long score;
+
+
+    /**
      * 状态:正常/注销/封号
      */
     private String userState;
